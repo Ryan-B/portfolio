@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
-var server = app.listen(1991, function() {
-  console.log('Go Dawgs on: 1991');
+var port = process.env.PORT || 1991;
+var server = app.listen(port, function(){
+	console.log("Hello at 1991");
 });
 
 //Body Parser
