@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angular_Port</title>
+  	
+       
+	<script type="text/javascript" src="/js/lib/angular.js"></script>
+	<script type="text/javascript" src="/js/lib/angular-routes.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/js/lib/jquery.timer.js"></script>
+	
+	
+	<script type="text/javascript">
+
+
+var app = angular.module('app', ['ngRoute']);
+
+app.config(function($routeProvider){
+	$routeProvider
+	
+	.when('/ryan', {
+		templateUrl: '/partials/ryan.partial.html'
+	})
+	.when('/code', {
+		templateUrl: '/partials/code.partial.html'
+	})
+});	
+
+
+
+
+
+	</script>
+	
+</head>
+<header>
+	<div ng-view id="stats"></div>
+	<a id="uw_tex"  href="#/ryan"><h2>Who is Ryan Bird?</h2></a><br>
+</header>
+<body>
+	<ul>
+		<li><button id="first">Pause</button></li>
+		
+	</ul>
+	Ryan Bird <div id="magic"></div>
+	
+	
+	
+	<script>
+
+
+		var words = ["is a full stack developer. &","founded Vogel 1 Devs. &", "is unit-tested driven. &","rips it with javascript. &","plays mahjong with python.  &","sailed the C.I. Sea with PHP. &","stiched the seam with MEAN. &", "enjoys the successes of others. &", "is a Dawg fan for life. &", "rocked Super Bowl XLVIII. &"],
+			el = document.getElementById('magic'),
+			word_counter = 0,
+			character_counter = 0;
+
+		function updateText()
+		{
+			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
+
+			if(character_counter == words[word_counter].length)
+			{
+				
+				word_counter++; 	//choose a different word
+				character_counter = 0;	//start over with the first character of the word
+				el.innerHTML = '';  //set the html to be blank
+
+				//if we're displaying the last word, go back to the first word
+				if(word_counter == words.length)
+					word_counter = 0;
+			}
+		}
+ 		var timer = $.timer(function() {
+  			updateText();
+		}, 300, true);
+		var want_to_hit_pause = true;
+
+ 		timer.play();
+		$("#first").click(function() {
+			if(want_to_hit_pause){
+				timer.pause();
+				want_to_hit_pause = false;
+			}	
+			else{
+				timer.play();
+				want_to_hit_pause = true;
+			}
+		})
+		
+		
+		
+	</script>
+	
+	
+	
+		
+
+
+					
+	<ul>
+		<li>
+			<a href="https://www.linkedin.com/in/ryan-bird-847487109"><img id="in_logo" src="in.png"></a>
+		</li>
+		<li>
+			<a href="http://dawg-chat.herokuapp.com"><h5>LiveChat</h5></a>
+		</li>
+		<li>
+			<a href="https://github.com/Ryan-B"><img class="logo" src="github.png"></a>
+		</li>
+	</ul>
+
+
+	
+
+</body>
+</html>
+
+<style>
+	body {
+		background-color:black;
+		font-family: monospace;
+		color:white;
+		font-size:50px;
+		text-align: center;
+		margin-top:3%;
+	}
+
+	#magic{
+		color: #777;
+		border-right: 1px solid #777;
+		padding-right: 7px;
+		display: inline;
+	}
+	.logo{
+
+		width: 50%;
+		height: 50%;
+	}
+	#in_logo{
+		width: 50%;
+		height: 50%;
+	}
+	 ul li{
+		display: inline-block;
+	}
+	button{
+		display: block;
+		margin: 0 auto;
+		border-radius: 10px;
+	}
+	#first{
+		background-color: darkviolet;
+	}
+
+</style>
