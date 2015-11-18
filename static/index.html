@@ -41,10 +41,10 @@ app.config(function($routeProvider){
 	<a id="uw_tex"  href="#/ryan"><h2>Who is Ryan Bird?</h2></a><br>
 </header>
 <body>
-	<ul>
-		<li><button id="first">Pause</button></li>
+	
+		<a href="" id="first">Pause</a>
 		
-	</ul>
+	
 	Ryan Bird <div id="magic"></div>
 	
 	
@@ -52,7 +52,7 @@ app.config(function($routeProvider){
 	<script>
 
 
-		var words = ["is a full stack developer. &","founded Vogel 1 Devs. &", "is unit-test driven. &","rips it with Javascript. &","plays mahjong with Python.  &","sailed the RESTful Sea with PHP. &","stiched the seam with MEAN. &"],
+		var words = ["is a full stack developer. &","founded Vogel 1 Devs. &", "is unit-test driven. &","rips it with Javascript. &","plays mahjong with Python.  &","sailed the RESTful Seas with PHP. &","stiched up the seam with MEAN. &"],
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0;
@@ -75,7 +75,7 @@ app.config(function($routeProvider){
 		}
  		var timer = $.timer(function() {
   			updateText();
-		}, 100, true);
+		}, 200, true);
 		var want_to_hit_pause = true;
 
  		timer.play();
@@ -111,7 +111,7 @@ app.config(function($routeProvider){
 			<a href="https://github.com/Ryan-B"><img class="logo" src="github.png"></a>
 		</li>
 	</ul>
-
+			<a href="/" id="reset">reset the page</a>
 
 	
 
@@ -120,16 +120,20 @@ app.config(function($routeProvider){
 
 <style>
 	body {
-		background-color:black;
+		background-image: url('tahoma.jpeg');
+
+    	background-repeat: no-repeat;
+   
+    	background-size: cover;
 		font-family: monospace;
-		color:white;
+		color:#777;
 		font-size:50px;
 		text-align: center;
-		margin-top:3%;
+		
 	}
 
 	#magic{
-		color: #777;
+		color: black;
 		border-right: 1px solid #777;
 		padding-right: 7px;
 		display: inline;
@@ -145,14 +149,21 @@ app.config(function($routeProvider){
 	}
 	 ul li{
 		display: inline-block;
+		margin: 0 auto;
 	}
-	button{
+	a{
 		display: block;
 		margin: 0 auto;
-		border-radius: 10px;
+		
+		
 	}
 	#first{
-		background-color: darkviolet;
+		font-size: 14pt;
+		color: darkviolet;
+	}
+	#reset{
+		font-size: 14pt;
+		color: darkviolet;
 	}
 
 </style>
