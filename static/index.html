@@ -13,7 +13,9 @@
 	<script type="text/javascript" src="/js/lib/jquery.timer.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-	
+	<link href='https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Syncopate:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>
 	
 	<script type="text/javascript">
 
@@ -44,7 +46,7 @@ app.config(function($routeProvider){
 </header>
 <body>
 	
-		<a href="" id="first">Pause</a>
+		<a href="" id="first"><button class="btn">Pause/Play</button></a>
 		
 	
 	Ryan Bird <div id="magic"></div>
@@ -54,7 +56,7 @@ app.config(function($routeProvider){
 	<script>
 
 
-		var words = ["is a full stack developer... &","founded Vogel1Devs... &", "rips it with Javascript... &","plays mahjong with Python...  &","sailed the RESTful Seas with PHP... &","stitched up the seam with MEAN... &", "specializes in unit-testing. &"],
+		var words = ["is a full stack developer... &","founded Vogel1Devs... &", "rips it with Javascript... &","plays mahjong with Python...  &","sailed the RESTful Seas with PHP... &","stitched up the seam with MEAN... &", "specializes in unit-testing... &"],
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0;
@@ -77,7 +79,7 @@ app.config(function($routeProvider){
 		}
  		var timer = $.timer(function() {
   			updateText();
-		}, 190, true);
+		}, 110, true);
 		var want_to_hit_pause = true;
 
  		timer.play();
@@ -107,7 +109,7 @@ app.config(function($routeProvider){
 			<a href="https://www.linkedin.com/in/ryan-bird-847487109"><img id="in_logo" src="in.png"></a>
 		</li>
 		<li>
-			<a href="http://dawg-chat.herokuapp.com"><h5>LiveChat</h5></a>
+			<a href="http://dawg-chat.herokuapp.com"><h5 id="chat">LiveChat</h5></a>
 		</li>
 		<li>
 			<a href="https://github.com/Ryan-B"><img class="logo" src="github.png"></a>
@@ -145,9 +147,17 @@ app.config(function($routeProvider){
 		width: 50%;
 		height: 50%;
 	}
+	.logo:hover{
+		width: 80%;
+		height: 80%;
+	}
 	#in_logo{
 		width: 50%;
 		height: 50%;
+	}
+	#in_logo:hover{
+		width: 80%;
+		height: 80%;
 	}
 	 ul li{
 		display: inline-block;
@@ -160,13 +170,41 @@ app.config(function($routeProvider){
 	h2{
 		font-family: 'Audiowide', cursive; 
 	}
+	h2:hover{
+		font-family: 'Fontdiner Swanky', cursive;
+		color: gold;
+		font-size: 56.25pt; 
+	}
 	#first{
 		font-size: 14pt;
-		color: darkviolet;
+		color: white;
 	}
 	#reset{
 		font-size: 14pt;
-		color: darkviolet;
+		color: white;
+	}
+	#reset:hover{
+		font-size: 14pt;
+		color: aquamarine;
+	}
+	.btn{
+		-webkit-border-radius: 10;
+		-moz-border-radius: 10;
+		border-radius: 10px;
+		font-family: Arial;
+		color: #ffffff;
+		font-size: 14px;
+		background: #3b9e13;
+		padding: 10px 20px 10px 20px;
+		text-decoration: none;
+	}
+	.btn:hover{
+	  	background: #d11938;
+	  	text-decoration: none;
+	}
+	#chat:hover{
+		color: gold;
+		
 	}
 
 </style>
