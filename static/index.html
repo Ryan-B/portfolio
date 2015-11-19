@@ -11,6 +11,8 @@
 	<script type="text/javascript" src="/js/lib/angular-routes.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="/js/lib/jquery.timer.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 	
 	
 	<script type="text/javascript">
@@ -52,7 +54,7 @@ app.config(function($routeProvider){
 	<script>
 
 
-		var words = ["is a full stack developer. &","founded Vogel 1 Devs. &", "is unit-test driven. &","rips it with Javascript. &","plays mahjong with Python.  &","sailed the RESTful Seas with PHP. &","stiched up the seam with MEAN. &"],
+		var words = ["is a full stack developer... &","founded Vogel1Devs... &", "rips it with Javascript... &","plays mahjong with Python...  &","sailed the RESTful Seas with PHP... &","stitched up the seam with MEAN... &", "specializes in unit-testing. &"],
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0;
@@ -75,7 +77,7 @@ app.config(function($routeProvider){
 		}
  		var timer = $.timer(function() {
   			updateText();
-		}, 200, true);
+		}, 190, true);
 		var want_to_hit_pause = true;
 
  		timer.play();
@@ -125,7 +127,7 @@ app.config(function($routeProvider){
     	background-repeat: no-repeat;
    
     	background-size: cover;
-		font-family: monospace;
+		font-family: 'Nunito', sans-serif;
 		color:#777;
 		font-size:50px;
 		text-align: center;
@@ -154,8 +156,9 @@ app.config(function($routeProvider){
 	a{
 		display: block;
 		margin: 0 auto;
-		
-		
+	}
+	h2{
+		font-family: 'Audiowide', cursive; 
 	}
 	#first{
 		font-size: 14pt;
