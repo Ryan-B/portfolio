@@ -108,8 +108,8 @@ app.config(function($routeProvider){
 		
 
 
-	<h4 id="proj">Deployed Projects</h4>				
-	<ul>
+	<h4 id="proj">Live Links</h4>				
+	<ul id="links">
 		<li>
 			<a href="https://www.linkedin.com/in/ryan-bird-847487109"><img id="in_logo" src="in.png"></a>
 		</li>
@@ -131,7 +131,7 @@ app.config(function($routeProvider){
 
 <style>
 	*{
-		/*border:1px dotted black;*/
+		border:1px dotted black;
 	}
 	body {
 		background-image: url('mt.jpg');
@@ -147,7 +147,7 @@ app.config(function($routeProvider){
 	}
 
 	#magic{
-		color: limegreen;
+		color: lime;
 		border-right: 1px solid #777;
 		padding-right: 7px;
 		display: inline;
@@ -156,6 +156,7 @@ app.config(function($routeProvider){
 
 		width: 50%;
 		height: 50%;
+
 	}
 	.logo:hover{
 		width: 80%;
@@ -219,12 +220,14 @@ app.config(function($routeProvider){
 	}
 	#chat{
 		color: white;
+		margin-top: 1px;
 	}
 	#chat:hover{
 		color: dodgerblue;
 		
 	}
 	#dis_u{
+		margin-top: 1px;
 		color: white;
 		font-family: 'Princess Sofia', cursive; 
 	}
@@ -233,7 +236,13 @@ app.config(function($routeProvider){
 		font-family: 'Princess Sofia', cursive; 
 	}
 	#proj{
-
+		color: lightgrey;
+		font-family: courier;
+		font-size: 12pt;
+		margin-top: 4%;
+	}
+	#links{
+		margin-top: 0 auto;
 	}
 
 </style>
