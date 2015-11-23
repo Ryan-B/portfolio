@@ -18,6 +18,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Princess+Sofia' rel='stylesheet' type='text/css'>
 	
 	<script type="text/javascript">
 
@@ -107,14 +108,14 @@ app.config(function($routeProvider){
 		
 
 
-					
+	<h4>Deployed Projects</h4>				
 	<ul>
 		<li>
 			<a href="https://www.linkedin.com/in/ryan-bird-847487109"><img id="in_logo" src="in.png"></a>
 		</li>
-		<li><h6><a href="http://discontinu.herokuapp.com">discontinÜ</a></h6></li>
+		<li><a href="http://discontinu.herokuapp.com"><h6 id="dis_u">discontinÜ</h6></a></li>
 	<li></li>
-	<li><h6><a href="http://dawg-chat.herokuapp.com">Socket.io Live Chat</a></h6></li>
+	<li><a href="http://dawg-chat.herokuapp.com"><h6 id="chat">Socket.io Live Chat</h6></a></li>
 		<li>
 			<a href="https://github.com/Ryan-B"><img class="logo" src="github.png"></a>
 		</li>
@@ -136,14 +137,14 @@ app.config(function($routeProvider){
    
     	background-size: cover;
 		font-family: 'Nunito', sans-serif;
-		color:lightgrey;
+		color:white;
 		font-size:50px;
 		text-align: center;
 		
 	}
 
 	#magic{
-		color: lightgrey;
+		color: green;
 		border-right: 1px solid #777;
 		padding-right: 7px;
 		display: inline;
@@ -166,7 +167,7 @@ app.config(function($routeProvider){
 		height: 80%;
 	}
 	 ul li{
-		display: inline-block;
+		display: inline;
 		margin: 0 auto;
 	}
 	a{
@@ -176,11 +177,11 @@ app.config(function($routeProvider){
 	h2{
 		font-family: 'Audiowide', cursive;
 		display: inline-block;
-		color: lightgrey; 
+		color: white; 
 	}
 	h2:hover{
 		font-family: 'Fontdiner Swanky', cursive;
-		color: darkgrey;
+		color: dodgerblue;
 		font-size: 56.25pt;
 		display: inline-block; 
 	}
@@ -195,7 +196,7 @@ app.config(function($routeProvider){
 	}
 	#reset:hover{
 		font-size: 14pt;
-		color: aquamarine;
+		color: dodgerblue;
 		display: inline-block;
 	}
 	.btn{
@@ -213,9 +214,20 @@ app.config(function($routeProvider){
 	  	background: #d11938;
 	  	text-decoration: none;
 	}
+	#chat{
+		color: white;
+	}
 	#chat:hover{
-		color: gold;
+		color: dodgerblue;
 		
+	}
+	#dis_u{
+		color: white;
+		font-family: 'Princess Sofia', cursive; 
+	}
+	#dis_u:hover{
+		color: dodgerblue;
+		font-family: 'Princess Sofia', cursive; 
 	}
 
 </style>
