@@ -13,11 +13,14 @@
 	<script type="text/javascript" src="/js/lib/jquery.timer.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Mrs+Sheppards' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Syncopate:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
 	
 	<script type="text/javascript">
+
 
 
 var app = angular.module('app', ['ngRoute']);
@@ -31,6 +34,7 @@ app.config(function($routeProvider){
 	.when('/code', {
 		templateUrl: '/partials/code.partial.html'
 	})
+	
 });	
 
 
@@ -46,11 +50,11 @@ app.config(function($routeProvider){
 </header>
 <body>
 	
-		<a href="" id="first"><button class="btn">Pause/Play</button></a>
 		
 	
 	Ryan Bird <div id="magic"></div>
-	
+		<br>
+		<a href="" id="first"><button class="btn">>   =</button></a>
 	
 	
 	<script>
@@ -108,13 +112,15 @@ app.config(function($routeProvider){
 		<li>
 			<a href="https://www.linkedin.com/in/ryan-bird-847487109"><img id="in_logo" src="in.png"></a>
 		</li>
-		<li>
-			<a href="http://dawg-chat.herokuapp.com"><h5 id="chat">LiveChat</h5></a>
-		</li>
+		<li><h6><a href="http://discontinu.herokuapp.com">discontinÜ</a></h6></li>
+	<li></li>
+	<li><h6><a href="http://dawg-chat.herokuapp.com">Socket.io Live Chat</a></h6></li>
 		<li>
 			<a href="https://github.com/Ryan-B"><img class="logo" src="github.png"></a>
 		</li>
 	</ul>
+
+
 			<a href="/" id="reset">reset the page</a>
 
 	
@@ -124,20 +130,20 @@ app.config(function($routeProvider){
 
 <style>
 	body {
-		background-image: url('tahoma.jpeg');
+		background-image: url('mt.jpg');
 
     	background-repeat: no-repeat;
    
     	background-size: cover;
 		font-family: 'Nunito', sans-serif;
-		color:#777;
+		color:lightgrey;
 		font-size:50px;
 		text-align: center;
 		
 	}
 
 	#magic{
-		color: black;
+		color: lightgrey;
 		border-right: 1px solid #777;
 		padding-right: 7px;
 		display: inline;
@@ -164,28 +170,33 @@ app.config(function($routeProvider){
 		margin: 0 auto;
 	}
 	a{
-		display: block;
+		display: inline-block;
 		margin: 0 auto;
 	}
 	h2{
-		font-family: 'Audiowide', cursive; 
+		font-family: 'Audiowide', cursive;
+		display: inline-block;
+		color: lightgrey; 
 	}
 	h2:hover{
 		font-family: 'Fontdiner Swanky', cursive;
-		color: gold;
-		font-size: 56.25pt; 
+		color: darkgrey;
+		font-size: 56.25pt;
+		display: inline-block; 
 	}
 	#first{
 		font-size: 14pt;
-		color: white;
+		color: lightgrey;
 	}
 	#reset{
 		font-size: 14pt;
-		color: white;
+		color: lightgrey;
+		display: inline-block;
 	}
 	#reset:hover{
 		font-size: 14pt;
 		color: aquamarine;
+		display: inline-block;
 	}
 	.btn{
 		-webkit-border-radius: 10;
@@ -193,9 +204,9 @@ app.config(function($routeProvider){
 		border-radius: 10px;
 		font-family: Arial;
 		color: #ffffff;
-		font-size: 14px;
+		font-size: 8px;
 		background: #3b9e13;
-		padding: 10px 20px 10px 20px;
+		padding: 5px 10px 5px 10px;
 		text-decoration: none;
 	}
 	.btn:hover{
